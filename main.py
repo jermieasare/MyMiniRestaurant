@@ -1,5 +1,5 @@
 from nicegui import ui,app
-from sections import hero, welcome
+from sections import hero, welcome,menu
 
 #expose the assests folder to the nicegui server
 app.add_static_files("/assets", "assets")
