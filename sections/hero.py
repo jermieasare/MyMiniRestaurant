@@ -9,28 +9,25 @@ def render():
         with ui.element("nav").classes("flex flex-row justify-between items-center w-full fixed left-0 top-0 px-20 py-10"): 
             #logo
             with ui.row().classes('items-center space-x-2'):
-                ui.label('PlatedBy').classes('text-2xl font-bold text-blue')
+                ui.label('PlatedBy').classes('text-2xl font-bold text-blue-7')
                 ui.label('JERMIE').classes('text-s font-light rounded-full border-2 border-white text-blue-7')
             #navlinks
             with ui.row().classes('md:flex items-center space-x-6'):
-                ui.link('HOME', '#').classes('text-sm font-semibold text-blue-7 hover:text-red-700 no-underline')
-                ui.link('MENU', '#').classes('text-sm font-semibold text-blue-7 hover:text-red-700 no-underline')
-                ui.link('RESERVATION', '#').classes('text-sm font-semibold text-blue-7 hover:text-red-700 no-underline')
-                ui.link('GALLERY', '#').classes('text-sm font-semibold text-blue-7 hover:text-red-700 no-underline')
-                ui.link('ABOUT', '#').classes('text-sm font-semibold text-blue-7 hover:text-red-700 no-underline')
-                ui.link('BLOG', '#').classes('text-sm font-semibold text-blue-7 hover:text-red-700 no-underline')
-                ui.link('CONTACT', '#').classes('text-sm font-semibold text-blue-7 hover:text-red-700 no-underline')
+                ui.link('HOME', '#').classes('text-sm font-semibold text-black hover:text-red-700 no-underline')
+                ui.link('MENU', '#').classes('text-sm font-semibold text-black hover:text-red-700 no-underline')
+                ui.link('RESERVATION', '#').classes('text-sm font-semibold text-black hover:text-red-700 no-underline')
+                ui.link('GALLERY', '#').classes('text-sm font-semibold text-black hover:text-red-700 no-underline')
+                ui.link('ABOUT', '#').classes('text-sm font-semibold text-black hover:text-red-700 no-underline')
+                ui.link('BLOG', '#').classes('text-sm font-semibold text-black hover:text-red-700 no-underline')
+                ui.link('CONTACT', '#').classes('text-sm font-semibold text-black hover:text-red-700 no-underline')
             #social media icons
-            with ui.row().classes("text-blue"):
+            with ui.row().classes("text-black"):
                 ui.html("<i class='fab fa-facebook fa-1x'></i>")
                 ui.html("<i class='fab fa-twitter fa-1x'></i>")
                 ui.html("<i class='fab fa-instagram fa-1x'></i>")
-            # Mobile menu button (placeholder)
-            #ui.icon('menu').classes('md:hidden')
 
         # Hero Section
         with ui.element('div').classes('text-white font-bold text-center bg-black/50 w-full h-full flex flex-col items-center justify-center'):
-            #with ui.column().classes('absolute left-1/2 -translate-x-1/2 z-10 items-center justify-center space-y-4 text-white text-center mt-6'):
                 ui.label('Welcome to').classes('font-bold text-3xl md:text-5xl mb-4')
                 ui.label('PlatedBy JERMIE').classes('text-4xl md:text-7xl font-bold text-blue-6 mb-4 tracking-wider')
                 ui.button('LOOK MENU', on_click=lambda: ui.notify('Menu clicked')).classes('mt-4 px-8 py-3 rounded-full text-blue-6').props("color=white")
