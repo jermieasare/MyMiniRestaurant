@@ -9,8 +9,8 @@ def render():
         with ui.element("nav").classes("flex flex-row justify-between items-center w-full fixed left-0 top-0 px-20 py-10"): 
             #logo
             with ui.row().classes('items-center space-x-2'):
-                ui.label('PlatedBy').classes('text-2xl font-bold text-blue-7')
-                ui.label('JERMIE').classes('text-s font-light rounded-full border-2 border-white text-blue-7')
+                #ui.label('PlatedBy').classes('text-2xl font-bold text-blue-7')
+                ui.label('PlatedBy JERMIE').classes('text-s font-light rounded-full border-2 border-white text-blue-7')
             #navlinks
             with ui.row().classes('md:flex items-center space-x-6'):
                 ui.link('HOME', '#').classes('text-sm font-semibold text-black hover:text-red-700 no-underline')
