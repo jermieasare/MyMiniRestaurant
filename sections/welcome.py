@@ -10,11 +10,11 @@ def render():
         # Left side - text content
         with ui.column().classes('w-full md:w-1/2 items-center md:items-start text-center md:text-left'):
             #ui.label('Ghanaian Restaurant').classes('text-sm font-medium text-red-500 font-italic tracking-widest')
-            ui.label('GHANAIAN RESTAURANT').classes('text-2xl font-light text-red mt-2')
+            ui.label('GHANAIAN RESTAURANT').classes('text-2xl font-light text-blue mt-2')
             ui.label('AKWAABA').classes('text-6xl font-light')
-            ui.label('''Discover Ghana's finest flavors where tradition meets modern taste. At Plated by Jermie, authentic Ghanaian cuisine is reimagined for today’s food lovers.''').classes('mt-4 text-gray-700 leading-relaxed')
-            ui.link('OUR STORY', '#').classes('mt-6 text-red-500 font-semibold border-b-2 border-red-500 pb-1')
+            ui.label('''Discover Ghana's finest flavors where tradition meets modern taste. At PlatedBy Jermie, authentic Ghanaian cuisine is reimagined for today’s food lovers.''').classes('mt-4 text-gray-700 leading-relaxed')
+            ui.link('OUR STORY', '#').classes('mt-6 text-blue-500 font-semibold border-b-2 border-blue-500 pb-1')
 
         # Right side - image
         with ui.column().classes('w-full md:w-1/2 mt-8 md:mt-0'):
-            ui.image(WELCOME_IMAGE).classes('rounded-lg shadow-lg object-cover w-full h-auto')
+            ui.image(WELCOME_IMAGE).classes('rounded-lg shadow-lg object-cover w-full h-auto transition duration-300 ease-in-out transform hover:scale-110')

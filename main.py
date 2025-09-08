@@ -13,5 +13,6 @@ ui.add_head_html('<link rel="stylesheet" href="/assets/reset.css">')
 
 hero.render()
 welcome.render()
+menu.render()
 
 ui.run()
