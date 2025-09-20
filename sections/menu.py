@@ -8,24 +8,24 @@ def render():
             # Carousel images
             carousel_images = [
                 '/assets/menu_image1.jpg',
-                '/assets/menu_image2.jpg',  # Assuming you have these images
-                '/assets/menu_image3.jpg',  # Assuming you have these images
+                '/assets/menu_image1.jpg',
+                '/assets/menu_3.jpg',
             ]
             
             # Create a simple carousel using NiceGUI's built-in carousel component
             with ui.carousel().classes('w-full h-full'):
                 for img_src in carousel_images:
-                    with ui.carousel_slide().classes('w-full h-full relative'):
+                    with ui.carousel_slide().classes('w-full h-full'):
                         # Background image
                         ui.element('div')\
                             .style(f"background-image: url({img_src})")\
                             .classes("absolute inset-0 bg-cover bg-center")
                         
                         # Overlay and text
-                        ui.element('div').classes('absolute inset-0 bg-black bg-opacity-40')
+                        ui.element('div').classes('absolute inset-0 bg-opacity-30')
                         with ui.column().classes('absolute inset-0 flex flex-col items-center justify-center'):
-                            ui.label('DISCOVER OUR MENU').classes('text-5xl font-bold text-white mb-4')
-                            ui.label('Authentic Ghanaian Cuisine').classes('text-2xl text-white')
+                            ui.label('DISCOVER').classes('text-3xl font-bold text-blue mb-4')
+                            ui.label('OUR MENU').classes('text-7xl text-white')
 
         
         # Menu Grid Section
@@ -46,21 +46,22 @@ def render():
                 # All foods panel
                 with ui.tab_panel('All'):
                     create_food_grid([
-                        {'name': 'Jollof Rice', 'price': '$15', 'image': '/assets/jollof.jpg', 'description': 'Spicy rice dish cooked with tomatoes and aromatic spices'},
-                        {'name': 'Waakye', 'price': '$14', 'image': '/assets/waakye.jpg', 'description': 'Rice and beans dish served with special waakye sauce'},
-                        {'name': 'Banku & Tilapia', 'price': '$18', 'image': '/assets/banku.jpg', 'description': 'Fermented corn dough with grilled tilapia and pepper sauce'},
-                        {'name': 'Fufu & Light Soup', 'price': '$16', 'image': '/assets/fufu.jpg', 'description': 'Pounded cassava and plantain with spicy soup'},
-                        {'name': 'Kelewele', 'price': '$8', 'image': '/assets/kelewele.jpg', 'description': 'Spicy fried plantains seasoned with ginger and spices'},
-                        {'name': 'Red Red', 'price': '$12', 'image': '/assets/red_red.jpg', 'description': 'Black-eyed peas stew with fried plantain'},
+                        {'name': 'Jollof Papabi', 'price': 'GHC150', 'image': '/assets/jollof.jpg', 'description': 'Spicy rice dish cooked with tomatoes and aromatic spices'},
+                        {'name': 'Waakye GuyGuy', 'price': 'GHC140', 'image': '/assets/waakye.jpg', 'description': 'Rice and beans dish served with special waakye sauce'},
+                        {'name': 'Banku & Tilapia', 'price': 'GHC180', 'image': '/assets/banku.jpg', 'description': 'Fermented corn dough with grilled tilapia and pepper sauce'},
+                        {'name': 'Fufu & Light Soup', 'price': 'GHC100', 'image': '/assets/fufu.jpg', 'description': 'Pounded cassava and plantain with spicy soup'},
+                        {'name': 'Aprapransa', 'price': 'GHC85', 'image': '/assets/kelewele.jpg', 'description': 'Spicy fried plantains seasoned with ginger and spices'},
+                        {'name': 'Red Red', 'price': 'GHC65', 'image': '/assets/red_red.jpg', 'description': 'Black-eyed peas stew with fried plantain'},
                     ])
                 
                 # Main dishes panel
                 with ui.tab_panel('Main Dishes'):
                     create_food_grid([
-                        {'name': 'Jollof Rice', 'price': '$15', 'image': '/assets/jollof.jpg', 'description': 'Spicy rice dish cooked with tomatoes and aromatic spices'},
-                        {'name': 'Waakye', 'price': '$14', 'image': '/assets/waakye.jpg', 'description': 'Rice and beans dish served with special waakye sauce'},
+                        {'name': 'Jollof Papabi', 'price': '$15', 'image': '/assets/jollof.jpg', 'description': 'Spicy rice dish cooked with tomatoes and aromatic spices'},
+                        {'name': 'Waakye GuyGuy', 'price': '$14', 'image': '/assets/waakye.jpg', 'description': 'Rice and beans dish served with special waakye sauce'},
                         {'name': 'Banku & Tilapia', 'price': '$18', 'image': '/assets/banku.jpg', 'description': 'Fermented corn dough with grilled tilapia and pepper sauce'},
                         {'name': 'Fufu & Light Soup', 'price': '$16', 'image': '/assets/fufu.jpg', 'description': 'Pounded cassava and plantain with spicy soup'},
+                        {'name': 'Aprapransa', 'price': '$16', 'image': '/assets/fufu.jpg', 'description': 'Pounded cassava and plantain with spicy soup'},
                     ])
                 
                 # Sides panel
@@ -68,6 +69,7 @@ def render():
                     create_food_grid([
                         {'name': 'Kelewele', 'price': '$8', 'image': '/assets/kelewele.jpg', 'description': 'Spicy fried plantains seasoned with ginger and spices'},
                         {'name': 'Tatale', 'price': '$7', 'image': '/assets/tatale.jpg', 'description': 'Sweet plantain pancakes with a hint of spice'},
+                        {'name': 'Spicy Sea-Food', 'price': '$7', 'image': '/assets/tatale.jpg', 'description': 'Sweet plantain pancakes with a hint of spice'},
                     ])
                 
                 # Desserts panel
